@@ -1,0 +1,40 @@
+@use "../custom" as *;
+@use "../components" as *;
+
+.get-started {
+  padding: 4rem 0;
+  background-color: $gray-200;
+}
+
+.cta-info {
+  padding: 3rem;
+
+  &__list {
+    line-height: 1.7;
+
+    li::marker {
+      content: "\2713 \a0\a0";
+      color: $white;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: 1.5rem;
+  }
+}
+
+// Form content
+.form {
+  padding: 1.5rem;
+
+  button {
+    i {
+      font-size: 1.05rem;
+      margin-left: 0.25rem;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: 1rem;
+  }
+}

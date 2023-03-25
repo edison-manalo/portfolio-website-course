@@ -1,0 +1,34 @@
+@use "../custom" as *;
+
+// Gradient mixin
+@mixin gradient {
+  background: linear-gradient(to right, rgba($primary, 0.95), rgba($secondary, 0.95));
+}
+
+// Absolute center
+@mixin absoluteCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// Transition property
+@mixin transitionAllProperty {
+  transition-property: all;
+  transition-duration: 250ms;
+}
+
+@mixin transitionImageScale {
+  transition-property: transform;
+  transition-duration: 700ms;
+  transition-timing-function: cubic-bezier(.2,1,.22,1);
+}
+
+// Gradient text
+@mixin gradientText {
+  background-image: linear-gradient(to right, $primary, $secondary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

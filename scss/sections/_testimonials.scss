@@ -1,0 +1,81 @@
+@use "../custom" as *;
+@use "../components" as *;
+
+.testimonials {
+  $width: min(40rem, 100%);
+
+  @include gradient;
+
+  &__card {
+    width: $width;
+    margin: 0 auto;
+    background-color: rgba($white, 0.85);
+    padding: 2rem 2rem 3.2rem 2rem;
+    border-radius: 0.6rem;
+    text-align: center;
+
+    i {
+      font-size: 1.5rem;
+      color: rgba($black, 0.2);
+    }
+
+    .ratings {
+      margin-top: 1.2rem;
+
+      i {
+        font-size: 0.75rem;
+        color: rgba($primary, 0.85);
+      }
+    }
+  }
+
+  &__picture {
+    width: 5rem;
+    height: 5rem;
+
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    img {
+      border: 0.2rem solid rgba($primary, 0.75);
+    }
+  }
+
+  &__name {
+    margin-top: 3rem;
+    font-weight: 500;
+    color: $white;
+    text-align: center;
+
+    h3 {
+      font-size: 1.4rem;
+      margin: 0;
+    }
+
+    p {
+      margin: 0;
+    }
+
+  }
+
+  &-btn {
+    width: $width;
+    margin: 1rem auto 0;
+
+    &__controls {
+      width: 5rem;
+      height: 3rem;
+  
+      i {
+        font-size: 1rem;
+      }
+
+      &:hover {
+        i {
+          color: $primary;
+        }
+      }
+    }
+  }
+}

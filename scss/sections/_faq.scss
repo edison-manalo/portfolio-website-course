@@ -1,0 +1,8 @@
+.faq {
+  $width: min(50rem, 100%);
+
+  &__items-wrapper {
+    width: $width;
+    margin: 0 auto;
+  }
+}

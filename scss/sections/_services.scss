@@ -1,0 +1,92 @@
+@use "../custom" as *;
+
+.border-right {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30%;
+    height: 0.05rem;
+    background-color: $gray-400;
+
+    @include media-breakpoint-up(md) {
+      bottom: auto;
+      left: auto;
+      transform: translateX(auto);
+
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      width: 0.05rem;
+      height: 70%;
+    }
+  }
+}
+
+.services {
+  padding: 1rem 0;
+
+  &-section {
+    overflow-x: hidden;
+  }
+
+  &__content {
+    padding: 1rem;
+    
+    @include media-breakpoint-up(lg) {
+      margin-top: 5rem;
+    }
+
+    .icon {
+      font-size: 2rem;
+      color: $primary;
+    }
+
+    .btn-rounded {
+      margin-left: 0;
+
+      &:hover {
+        background-color: transparent;
+        color: $black;
+
+        span {
+          background-color: transparent;
+
+          i {
+            color: $primary;
+          }
+        }
+      }
+
+      &:active {
+        span {
+          background-color: $primary;
+
+          i {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+
+  &__pic {
+    @include media-breakpoint-down(md) {
+      text-align: center;
+
+      img {
+        margin-top: -10rem;
+      }
+    }
+
+    @include media-breakpoint-down(sm) {
+      img {
+        margin-right: -10rem;
+      }
+    }
+  }
+}

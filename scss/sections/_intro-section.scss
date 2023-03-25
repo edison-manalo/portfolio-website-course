@@ -1,0 +1,33 @@
+@use "../custom" as *;
+@use "../components" as *;
+
+.intro-section {
+  padding: 10rem 0 0 0;
+  overflow-x: hidden;
+  @include gradient;
+
+  .btn-rounded {
+    margin-left: 0;
+  }
+}
+
+.intros {
+  .video-box {
+    position: relative;
+
+    a {
+      border-radius: 50%;
+      overflow: hidden;
+      animation: pulse 2s ease infinite;
+
+      span {
+        display: inline-block;
+
+        i {
+          font-size: 4rem;
+          color: $primary;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,156 @@
+@use "../custom" as *;
+@use "../components" as *;
+
+.footer {
+  padding-top: 2rem;
+  background-color: $footer;
+}
+
+.contact-box {
+  &__icon {
+    padding-top: 0.7rem;
+    margin-right: 0.25rem;
+
+    i {
+      font-size: 1.3rem;
+      color: $gray-700;
+
+      @include media-breakpoint-up(sm) {
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  &__info {
+    padding: 0.4rem;
+
+    &__title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: white;
+      text-decoration: none;
+
+      &:hover {
+        color: $primary;
+        text-decoration: underline;
+      }
+
+      @include media-breakpoint-up(sm) {
+        font-size: 1.4rem;
+      }
+    }
+
+    &__subtitle {
+      font-size: 0.9rem;
+      color: $gray-500;
+
+      @include media-breakpoint-up(sm) {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+
+.footer-social {
+  background-color: #1c1a1d;
+
+  a {
+    display: inline-block;
+    margin: 0 0.4rem;
+
+    &:hover {
+      i {
+        color: $primary;
+      }
+    }
+
+    i {
+      font-size: 1.4rem;
+      color: rgba($white, 0.5);
+    }
+
+    @include media-breakpoint-up(sm) {
+      i {
+        margin: 0 0.45rem;
+      }
+    }
+  }
+}
+
+// Company info content
+.company-list {
+  li {
+    a {
+      text-decoration: none;
+      color: rgba($white, 0.5);
+
+      &:hover {
+        color: $primary;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// Copyright info content
+.footer-bottom {
+  background-color: rgba($black, 0.5);
+
+  &__copyright {
+    font-size: 0.9rem;
+
+    a {
+      text-decoration: none;
+      color: rgba($white, 0.5);
+
+      &:hover {
+        text-decoration: underline;
+        color: $primary;
+      }
+    }
+
+    .created-by {
+      i {
+        font-size: 0.85rem;
+        color: $primary;
+        margin: 0 0.25rem;
+      }
+    }
+
+    @include media-breakpoint-up(sm) {
+      font-size: 1rem;
+
+      .created-by {
+        i {
+          font-size: 0.95rem;
+        }
+      }
+    }
+  }
+}
+
+// Back to top button
+.back-to-top {
+  position: fixed;
+  width: 2.75rem;
+  height: 2.75rem;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 999;
+
+  i {
+    font-size: 1rem;
+    @include absoluteCenter;
+  }
+
+  @include media-breakpoint-up(sm) {
+    width: 3rem;
+    height: 3rem;
+    bottom: 2.5rem;
+    right: 2.5rem;
+
+    i {
+      font-size: 1.07rem;
+    }
+  }
+}
